@@ -7,18 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1ED00D291DC7D9002B3576 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7C1ED00C291DC7D9002B3576 /* FirebaseAuth */; };
+		7C1ED00F291DC7D9002B3576 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7C1ED00E291DC7D9002B3576 /* FirebaseFirestore */; };
+		7C1ED011291DC7D9002B3576 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C1ED010291DC7D9002B3576 /* FirebaseFirestoreSwift */; };
+		7C1ED013291DC7D9002B3576 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7C1ED012291DC7D9002B3576 /* FirebaseStorage */; };
+		7C1ED015291DC9D6002B3576 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C1ED014291DC9D6002B3576 /* GoogleService-Info.plist */; };
+		7C493F2E2935900A0002CD99 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C493F2D2935900A0002CD99 /* Review.swift */; };
+		7C493F302935924B0002CD99 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C493F2F2935924B0002CD99 /* ReviewView.swift */; };
+		7C493F322935A13A0002CD99 /* StarsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C493F312935A13A0002CD99 /* StarsSelectionView.swift */; };
+		7C8337412935F9BE00183890 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8337402935F9BE00183890 /* ReviewViewModel.swift */; };
+		7CB25BFA2923AA2300945B58 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB25BF92923AA2300945B58 /* Spot.swift */; };
+		7CB25BFC2923AC1800945B58 /* SpotDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB25BFB2923AC1800945B58 /* SpotDetailView.swift */; };
+		7CB25BFE29244D5B00945B58 /* SpotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB25BFD29244D5B00945B58 /* SpotViewModel.swift */; };
 		7CB7C6DF291D03580094E9F2 /* Food_ExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB7C6DE291D03580094E9F2 /* Food_ExplorerApp.swift */; };
-		7CB7C6E1291D03580094E9F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB7C6E0291D03580094E9F2 /* ContentView.swift */; };
+		7CB7C6E1291D03580094E9F2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB7C6E0291D03580094E9F2 /* LoginView.swift */; };
 		7CB7C6E3291D035A0094E9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB7C6E2291D035A0094E9F2 /* Assets.xcassets */; };
 		7CB7C6E6291D035A0094E9F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB7C6E5291D035A0094E9F2 /* Preview Assets.xcassets */; };
+		7CD4BBE92921D49F007EB084 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4BBE82921D49F007EB084 /* ListView.swift */; };
+		7CDFD701292DFB32005345D2 /* PlaceLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFD6FD292DFB32005345D2 /* PlaceLookupView.swift */; };
+		7CDFD702292DFB32005345D2 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFD6FE292DFB32005345D2 /* Place.swift */; };
+		7CDFD703292DFB32005345D2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFD6FF292DFB32005345D2 /* LocationManager.swift */; };
+		7CDFD704292DFB32005345D2 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFD700292DFB32005345D2 /* PlaceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C1ED00A291DC08B002B3576 /* Food-Explorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Food-Explorer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7C1ED014291DC9D6002B3576 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7C493F2D2935900A0002CD99 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		7C493F2F2935924B0002CD99 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		7C493F312935A13A0002CD99 /* StarsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsSelectionView.swift; sourceTree = "<group>"; };
+		7C8337402935F9BE00183890 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		7CB25BF92923AA2300945B58 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		7CB25BFB2923AC1800945B58 /* SpotDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailView.swift; sourceTree = "<group>"; };
+		7CB25BFD29244D5B00945B58 /* SpotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewModel.swift; sourceTree = "<group>"; };
 		7CB7C6DB291D03580094E9F2 /* Food Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB7C6DE291D03580094E9F2 /* Food_ExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_ExplorerApp.swift; sourceTree = "<group>"; };
-		7CB7C6E0291D03580094E9F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7CB7C6E0291D03580094E9F2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CB7C6E2291D035A0094E9F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CB7C6E5291D035A0094E9F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7CD4BBE82921D49F007EB084 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		7CDFD6FD292DFB32005345D2 /* PlaceLookupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceLookupView.swift; sourceTree = "<group>"; };
+		7CDFD6FE292DFB32005345D2 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		7CDFD6FF292DFB32005345D2 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		7CDFD700292DFB32005345D2 /* PlaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +57,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1ED00D291DC7D9002B3576 /* FirebaseAuth in Frameworks */,
+				7C1ED013291DC7D9002B3576 /* FirebaseStorage in Frameworks */,
+				7C1ED00F291DC7D9002B3576 /* FirebaseFirestore in Frameworks */,
+				7C1ED011291DC7D9002B3576 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C493F2A29358F920002CD99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CDFD6FE292DFB32005345D2 /* Place.swift */,
+				7CB25BF92923AA2300945B58 /* Spot.swift */,
+				7C493F2D2935900A0002CD99 /* Review.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7C493F2B29358FB70002CD99 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7CB25BFD29244D5B00945B58 /* SpotViewModel.swift */,
+				7CDFD6FF292DFB32005345D2 /* LocationManager.swift */,
+				7CDFD700292DFB32005345D2 /* PlaceViewModel.swift */,
+				7C8337402935F9BE00183890 /* ReviewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7C493F2C29358FE10002CD99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CB7C6E0291D03580094E9F2 /* LoginView.swift */,
+				7CD4BBE82921D49F007EB084 /* ListView.swift */,
+				7CB25BFB2923AC1800945B58 /* SpotDetailView.swift */,
+				7CDFD6FD292DFB32005345D2 /* PlaceLookupView.swift */,
+				7C493F2F2935924B0002CD99 /* ReviewView.swift */,
+				7C493F312935A13A0002CD99 /* StarsSelectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7CB7C6D2291D03580094E9F2 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +120,13 @@
 		7CB7C6DD291D03580094E9F2 /* Food Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				7C1ED00A291DC08B002B3576 /* Food-Explorer-Info.plist */,
 				7CB7C6DE291D03580094E9F2 /* Food_ExplorerApp.swift */,
-				7CB7C6E0291D03580094E9F2 /* ContentView.swift */,
+				7C493F2A29358F920002CD99 /* Models */,
+				7C493F2B29358FB70002CD99 /* ViewModels */,
+				7C493F2C29358FE10002CD99 /* Views */,
 				7CB7C6E2291D035A0094E9F2 /* Assets.xcassets */,
+				7C1ED014291DC9D6002B3576 /* GoogleService-Info.plist */,
 				7CB7C6E4291D035A0094E9F2 /* Preview Content */,
 			);
 			path = "Food Explorer";
@@ -83,6 +156,12 @@
 			dependencies = (
 			);
 			name = "Food Explorer";
+			packageProductDependencies = (
+				7C1ED00C291DC7D9002B3576 /* FirebaseAuth */,
+				7C1ED00E291DC7D9002B3576 /* FirebaseFirestore */,
+				7C1ED010291DC7D9002B3576 /* FirebaseFirestoreSwift */,
+				7C1ED012291DC7D9002B3576 /* FirebaseStorage */,
+			);
 			productName = "Food Explorer";
 			productReference = 7CB7C6DB291D03580094E9F2 /* Food Explorer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +190,9 @@
 				Base,
 			);
 			mainGroup = 7CB7C6D2291D03580094E9F2;
+			packageReferences = (
+				7C1ED00B291DC7D9002B3576 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 7CB7C6DC291D03580094E9F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +209,7 @@
 			files = (
 				7CB7C6E6291D035A0094E9F2 /* Preview Assets.xcassets in Resources */,
 				7CB7C6E3291D035A0094E9F2 /* Assets.xcassets in Resources */,
+				7C1ED015291DC9D6002B3576 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +220,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CB7C6E1291D03580094E9F2 /* ContentView.swift in Sources */,
+				7CB25BFC2923AC1800945B58 /* SpotDetailView.swift in Sources */,
+				7CDFD701292DFB32005345D2 /* PlaceLookupView.swift in Sources */,
+				7C8337412935F9BE00183890 /* ReviewViewModel.swift in Sources */,
+				7CB7C6E1291D03580094E9F2 /* LoginView.swift in Sources */,
+				7C493F322935A13A0002CD99 /* StarsSelectionView.swift in Sources */,
+				7CDFD702292DFB32005345D2 /* Place.swift in Sources */,
+				7C493F302935924B0002CD99 /* ReviewView.swift in Sources */,
+				7CB25BFE29244D5B00945B58 /* SpotViewModel.swift in Sources */,
 				7CB7C6DF291D03580094E9F2 /* Food_ExplorerApp.swift in Sources */,
+				7C493F2E2935900A0002CD99 /* Review.swift in Sources */,
+				7CDFD704292DFB32005345D2 /* PlaceViewModel.swift in Sources */,
+				7CD4BBE92921D49F007EB084 /* ListView.swift in Sources */,
+				7CB25BFA2923AA2300945B58 /* Spot.swift in Sources */,
+				7CDFD703292DFB32005345D2 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +365,11 @@
 				DEVELOPMENT_TEAM = ZMQC37ZP3D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Food-Explorer-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires access to the device´s location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to the device´s location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,9 +396,11 @@
 				DEVELOPMENT_TEAM = ZMQC37ZP3D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Food-Explorer-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires access to the device´s location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to the device´s location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,6 +438,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C1ED00B291DC7D9002B3576 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C1ED00C291DC7D9002B3576 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C1ED00B291DC7D9002B3576 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7C1ED00E291DC7D9002B3576 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C1ED00B291DC7D9002B3576 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		7C1ED010291DC7D9002B3576 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C1ED00B291DC7D9002B3576 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		7C1ED012291DC7D9002B3576 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C1ED00B291DC7D9002B3576 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7CB7C6D3291D03580094E9F2 /* Project object */;
 }
