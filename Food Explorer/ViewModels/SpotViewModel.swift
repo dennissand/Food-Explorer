@@ -6,6 +6,7 @@
 //
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 @MainActor
 
@@ -18,10 +19,10 @@ class SpotViewModel: ObservableObject {
         if let id = spot.id {
             do {
                 try await db.collection("spots").document(id).setData(spot.dictionary)
-                print("Data update successful !")
+                print("Spot update successful !")
                 return true
             } catch {
-                print("ERROR: Could not update in 'spots' \(error.localizedDescription)")
+                print("ERROR: Could not update spot in 'spots' \(error.localizedDescription)")
                 return false
             }
         } else {
@@ -29,7 +30,7 @@ class SpotViewModel: ObservableObject {
                 let documentRef = try await db.collection("spots").addDocument(data: spot.dictionary)
                 self.spot = spot
                 self.spot.id = documentRef.documentID
-                print("Data added successful !")
+                print("New Spot added successful !")
                 return true
             } catch {
                 print("ERROR: Could not create an new spot in 'spots' \(error.localizedDescription)")

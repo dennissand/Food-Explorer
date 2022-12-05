@@ -23,6 +23,7 @@
 		7CB7C6E1291D03580094E9F2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB7C6E0291D03580094E9F2 /* LoginView.swift */; };
 		7CB7C6E3291D035A0094E9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB7C6E2291D035A0094E9F2 /* Assets.xcassets */; };
 		7CB7C6E6291D035A0094E9F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB7C6E5291D035A0094E9F2 /* Preview Assets.xcassets */; };
+		7CCAE88D293ABE02005AFDCA /* SpotReviewRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCAE88C293ABE02005AFDCA /* SpotReviewRowView.swift */; };
 		7CD4BBE92921D49F007EB084 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4BBE82921D49F007EB084 /* ListView.swift */; };
 		7CDFD701292DFB32005345D2 /* PlaceLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFD6FD292DFB32005345D2 /* PlaceLookupView.swift */; };
 		7CDFD702292DFB32005345D2 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFD6FE292DFB32005345D2 /* Place.swift */; };
@@ -45,6 +46,7 @@
 		7CB7C6E0291D03580094E9F2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7CB7C6E2291D035A0094E9F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CB7C6E5291D035A0094E9F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7CCAE88C293ABE02005AFDCA /* SpotReviewRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotReviewRowView.swift; sourceTree = "<group>"; };
 		7CD4BBE82921D49F007EB084 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		7CDFD6FD292DFB32005345D2 /* PlaceLookupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceLookupView.swift; sourceTree = "<group>"; };
 		7CDFD6FE292DFB32005345D2 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				7CB7C6E0291D03580094E9F2 /* LoginView.swift */,
 				7CD4BBE82921D49F007EB084 /* ListView.swift */,
 				7CB25BFB2923AC1800945B58 /* SpotDetailView.swift */,
+				7CCAE88C293ABE02005AFDCA /* SpotReviewRowView.swift */,
 				7CDFD6FD292DFB32005345D2 /* PlaceLookupView.swift */,
 				7C493F2F2935924B0002CD99 /* ReviewView.swift */,
 				7C493F312935A13A0002CD99 /* StarsSelectionView.swift */,
@@ -226,6 +229,7 @@
 				7CB7C6E1291D03580094E9F2 /* LoginView.swift in Sources */,
 				7C493F322935A13A0002CD99 /* StarsSelectionView.swift in Sources */,
 				7CDFD702292DFB32005345D2 /* Place.swift in Sources */,
+				7CCAE88D293ABE02005AFDCA /* SpotReviewRowView.swift in Sources */,
 				7C493F302935924B0002CD99 /* ReviewView.swift in Sources */,
 				7CB25BFE29244D5B00945B58 /* SpotViewModel.swift in Sources */,
 				7CB7C6DF291D03580094E9F2 /* Food_ExplorerApp.swift in Sources */,

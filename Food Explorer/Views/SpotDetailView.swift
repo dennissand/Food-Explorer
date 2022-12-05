@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import MapKit
+import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct SpotDetailView: View {
@@ -16,14 +17,9 @@ struct SpotDetailView: View {
         var coordinate: CLLocationCoordinate2D
     }
     
-    
     @EnvironmentObject var spotVM: SpotViewModel
     @EnvironmentObject var locationManager: LocationManager
-    
-    // The wrong Path - change this in .onAppear
-    //@FirestoreQuery(collectionPath: "spots") var reviews: [Review]
     @FirestoreQuery(collectionPath: "spots") var reviews: [Review]
-    
     @State var spot: Spot
     @State private var showPlaceLookupSheet = false
     @State private var showReviewViewSheet = false
@@ -31,7 +27,14 @@ struct SpotDetailView: View {
     @State private var showingAsSheet = false
     @State private var mapRegion = MKCoordinateRegion()
     @State private var annotations: [Annotation] = []
-    
+    var avgRating: String {
+        guard reviews.count != 0 else {
+            return "0.0"
+        }
+        let averageValue = Double(reviews.reduce(0) {$0 + $1.rating}) /
+        Double(reviews.count)
+        return String(format: "%.1f", averageValue)
+    }
     
     @Environment(\.dismiss) private var dismiss
     let regionSize = 500.0 // meters
@@ -68,10 +71,10 @@ struct SpotDetailView: View {
                         NavigationLink {
                             ReviewView(spot: spot, review: review)
                         } label: {
-                            Text(review.title) // TODO custom cell
+                            SpotReviewRowView(review: review)
                         }
 
-                        }
+                    }
                         
                     
                 } header: {
@@ -79,7 +82,7 @@ struct SpotDetailView: View {
                         Text("Bewertung:")
                             .font(.title2)
                             .bold()
-                        Text("4,5") //TODO: Change to acomputed property
+                        Text(avgRating)
                             .font(.title)
                             .fontWeight(.black)
                             .foregroundColor(Color("FoodColor"))
@@ -101,6 +104,7 @@ struct SpotDetailView: View {
                 .headerProminence(.increased)
             }
             .listStyle(.plain)
+            .padding(.horizontal)
             
             Spacer()
         }
@@ -194,7 +198,7 @@ struct SpotDetailView: View {
                 
             
         } message: {
-           Text("Möchtest Du erst speichern damit du später eine Bewertung abgeben kannst ?")
+           Text("Möchtest Du erst speichern damit du eine Bewertung abgeben kannst?")
         }
 
     }

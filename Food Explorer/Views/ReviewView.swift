@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ReviewView: View {
+    @StateObject var reviewVM = ReviewViewModel()
     @State var spot: Spot
     @State var review: Review
-    @StateObject var reviewVM = ReviewViewModel()
+    @State var postedByThisUser = false
+    @State var rateOrReviewerString = "Vergib Sterne" // otherwise will say poster e-mail & date
     @Environment(\.dismiss) private var dismiss
-    
     
     var body: some View {
         VStack {
@@ -29,28 +31,35 @@ struct ReviewView: View {
             .padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            Text ("Bewertung:")
-                .font(.title2)
-                .bold()
+            Text (rateOrReviewerString)
+                .font(postedByThisUser ? .title2 : .subheadline)
+                .bold(postedByThisUser)
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+                .padding(.horizontal)
+            
+            
+            
             HStack {
                 StarsSelectionView(rating: $review.rating)
+                    .disabled(!postedByThisUser)
                     .overlay {
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(.gray.opacity(0.5),lineWidth: 2)
+                            .stroke(.gray.opacity(0.5),lineWidth: postedByThisUser ? 2 : 0.3)
                     }
             }
             .padding(.bottom)
             
             VStack (alignment: .leading) {
-                Text("Bewertungsüberschrift:")
+                Text("Bewertungstitel:")
                     .bold()
-                    .font(.title2)
+                    
                 
-                TextField ("Überschrift", text: $review.title)
-                    .textFieldStyle(.roundedBorder)
+                TextField ("Titel", text: $review.title)
+                    .padding(.horizontal, 6)
                     .overlay {
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(.gray.opacity(0.5), lineWidth: 2)
+                            .stroke(.gray.opacity(0.5), lineWidth: postedByThisUser ? 2 : 0.3)
                     }
                 
                 Text("Bewertung:")
@@ -59,38 +68,49 @@ struct ReviewView: View {
                 
                 TextField ("Bewertung", text: $review.body, axis: .vertical)
                     .padding(.horizontal, 6)
-                    .textFieldStyle(.roundedBorder)
                     .frame(maxHeight: .infinity, alignment: .topLeading)
                     .overlay {
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(.gray.opacity(0.5), lineWidth: 2)
+                            .stroke(.gray.opacity(0.5), lineWidth: postedByThisUser ? 2 : 0.3)
                     }
                 
             }
+            .disabled(!postedByThisUser)
             .padding(.horizontal)
+            .font(.title2)
             
             
             Spacer()
         }
-        
-        
-        .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                Button("Abbrechen") {
-                    dismiss()
-                }
+        .onAppear{
+            if review.reviewer == Auth.auth().currentUser?.email {
+                postedByThisUser = true
+            } else {
+                let reviewPostedOn = review.postedOn.formatted(date: .numeric, time: .omitted)
+                rateOrReviewerString = "von: \(review.reviewer) am: \(reviewPostedOn)"
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Speichern") {
-                    Task {
-                        let success = await reviewVM.saveReview(spot: spot, review: review)
-                        if success {
-                            dismiss()
-                        } else {
-                            print("ERROR: saving data in ReviewView")
-                            
+        }
+        .navigationBarBackButtonHidden(postedByThisUser)
+        .toolbar {
+            if postedByThisUser {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Abbrechen") {
+                        dismiss()
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Speichern") {
+                        Task {
+                            let success = await reviewVM.saveReview(spot: spot, review: review)
+                            if success {
+                                dismiss()
+                            } else {
+                                print("ERROR: saving data in ReviewView")
+                                
+                                }
+                            }
                         }
-                        
+            
                     }
                 }
             }
@@ -103,4 +123,4 @@ struct ReviewView: View {
             }
         }
     }
-}
+

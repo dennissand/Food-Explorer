@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import Firebase
 
 class ReviewViewModel: ObservableObject {
     @Published var review = Review()
@@ -16,14 +17,14 @@ class ReviewViewModel: ObservableObject {
         
         guard let spotID = spot.id else {
             print("ERROR: spot.id = nil")
-                return false
+            return false
         }
         let collectionString = "spots/\(spotID)/reviews"
         
         if let id = review.id {
             do {
                 try await db.collection(collectionString).document(id).setData(review.dictionary)
-                print("Data update successful !")
+                print("Data review update successful !")
                 return true
             } catch {
                 print("ERROR: Could not update in 'reviews' \(error.localizedDescription)")
@@ -32,7 +33,7 @@ class ReviewViewModel: ObservableObject {
         } else {
             do {
                 _ = try await db.collection(collectionString).addDocument(data: review.dictionary)
-                print("Data added successful !")
+                print("Data review added successful !")
                 return true
             } catch {
                 print("ERROR: Could not create an new review in 'reviews' \(error.localizedDescription)")
@@ -41,4 +42,5 @@ class ReviewViewModel: ObservableObject {
             
         }
     }
+    
 }

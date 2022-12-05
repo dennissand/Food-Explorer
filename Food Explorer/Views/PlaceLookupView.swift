@@ -57,6 +57,8 @@ struct PlaceLookupView: View {
 
 struct PlaceLookupView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceLookupView(spot: .constant(Spot()))            .environmentObject(LocationManager())
+        PlaceLookupView(spot:
+                .constant(Spot()))
+            .environmentObject(LocationManager())
     }
 }

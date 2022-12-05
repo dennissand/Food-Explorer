@@ -5,6 +5,7 @@
 //  Created by Dennis Sand on 15.11.22.
 //
 import Foundation
+import Firebase
 import FirebaseFirestoreSwift
 import CoreLocation
 
